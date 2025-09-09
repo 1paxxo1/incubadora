@@ -14,55 +14,38 @@
 
     <nav>
         <ul>
-            <li><a href="#introduccion">Introducción</a></li>
-            <li><a href="#componentes">Componentes</a></li>
-            <li><a href="#funcionamiento">Funcionamiento</a></li>
-            <li><a href="#resultados">Resultados</a></li>
-            <li><a href="#conclusiones">Conclusiones</a></li>
+            <li><a href="#introduccion">Fase 1</a></li>
+            
         </ul>
     </nav>
 
     <main>
         <section id="introduccion">
-            <h2>Introducción</h2>
+            <h2>sensores
+            </h2>
             <p>
-                Este proyecto consiste en el diseño y automatización de una incubadora para huevos de ganso. Se busca controlar variables como temperatura, humedad y volteo de huevos de forma automática.
-            </p>
+                Sensor temperatura Arduino DHT11: Lo primero que hay que decir de este sensor es que es digital y además incorpora un sensor de humedad y precisamente esta es la gran diferencia con el resto de sensores la conversión a grados centígrados. El mayor problema que podemos encontrar es el rango de temperaturas que va desde 0º C a 50º C.
+                El Módulo Bluetooth HC-06: Permite la configuración de algunos de sus parámetros de funcionamiento mediante el uso de comando AT. Los comandos AT son una lista de comandos que inician siempre con las letras AT, estos comandos son enviados por medio de un puerto Serie por lo que necesitaremos un Arduino o Conversor USB Serial para poder enviar los comandos desde nuestra PC.
+                Sensor de temperatura TPA81: Otro sensor de infrarrojos muy potente. Este tiene incorporado una funcionalidad que le hace capaz de hacer cosas muy interesantes. Puede medir la temperatura en 8 puntos diferentes al mismo tiempo gracias a la lente incorporada que trae.
+                Sensor SHT15: Se trata de un sensor de humedad y temperatura muy preciso, 0,3ºC, diseñado para trabajar en entornos con grandes fluctuaciones tanto en temperatura (de -40º C a 123,8º C) como en humedad.
+
+
         </section>
 
         <section id="componentes">
             <h2>Componentes Utilizados</h2>
             <ul>
-                <li>Microcontrolador (Arduino / ESP32)</li>
-                <li>Sensor de temperatura y humedad (DHT22)</li>
-                <li>Relevadores o SSR</li>
-                <li>Resistencias calefactoras</li>
+                <li>Microcontrolador (Arduino)</li>
+                <li>Sensor de temperatura y humedad (DHT11)</li>
+                <li>Relé</li>
+                <li>bombillos incandecentes</li>
                 <li>Motor para volteo de huevos</li>
                 <li>Pantalla LCD / Display</li>
                 <li>Fuente de alimentación</li>
             </ul>
         </section>
 
-        <section id="funcionamiento">
-            <h2>Funcionamiento del Sistema</h2>
-            <p>
-                El sistema monitorea constantemente la temperatura y humedad dentro de la incubadora. Si la temperatura baja, activa las resistencias. El motor realiza el volteo de huevos cada cierto tiempo. Todos los datos se visualizan en una pantalla.
-            </p>
-        </section>
-
-        <section id="resultados">
-            <h2>Resultados Esperados / Obtenidos</h2>
-            <p>
-                El sistema mantiene condiciones óptimas para la incubación, mejorando la tasa de eclosión. Aquí se pueden agregar gráficos, fotos o estadísticas del proceso.
-            </p>
-        </section>
-
-        <section id="conclusiones">
-            <h2>Conclusiones y Mejoras Futuras</h2>
-            <p>
-                Este proyecto demuestra cómo la automatización puede mejorar procesos agrícolas. Futuras mejoras incluyen conectividad WiFi, app móvil y panel solar para autosustentabilidad.
-            </p>
-        </section>
+        
     </main>
 
     <footer>
