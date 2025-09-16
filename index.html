@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto: Incubadora de Huevos de Ganso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Proyecto de Automatización: Incubadora de Huevos de Ganso</h1>
+        <p>Documentación del desarrollo y funcionamiento del sistema</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduccion">Fase 1</a></li>
+            
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduccion">
+            <h2>sensores
+            </h2>
+            <p>
+               <li> Sensor temperatura Arduino DHT11: Lo primero que hay que decir de este sensor es que es digital y además incorpora un sensor de humedad y precisamente esta es la gran diferencia con el resto de sensores la conversión a grados centígrados. El mayor problema que podemos encontrar es el rango de temperaturas que va desde 0º C a 50º C.</li>
+               <li>Sensor de temperatura TPA81: Otro sensor de infrarrojos muy potente. Este tiene incorporado una funcionalidad que le hace capaz de hacer cosas muy interesantes. Puede medir la temperatura en 8 puntos diferentes al mismo tiempo gracias a la lente incorporada que trae.</li>
+               <li>Sensor SHT15: Se trata de un sensor de humedad y temperatura muy preciso, 0,3ºC, diseñado para trabajar en entornos con grandes fluctuaciones tanto en temperatura (de -40º C a 123,8º C) como en humedad.</li>
+
+
+        </section>
+
+        <section id="componentes">
+            <h2>Componentes Utilizados</h2>
+            <ul>
+                <li>Microcontrolador (Arduino)</li>
+                <li>Sensor de temperatura y humedad (DHT11)</li>
+                <li>Relé</li>
+                <li>bombillos incandecentes</li>
+                <li>Motor para volteo de huevos</li>
+                <li>Pantalla LCD / Display</li>
+                <li>Fuente de alimentación</li>
+            </ul>
+        </section>
+
+        <div id="fase 2">
+            <img src="./img/diagrama_bloques.jpg" alt="">
+
+            <h3>Diseño técnico</h3>
+
+<p>  sensores (DHT11 y SHT15):
+<li>DHT11: Sensor económico para medir temperatura y humedad, útil como referencia básica.</li>
+<li>SHT15: Sensor de mayor precisión y respuesta más rápida. La combinación de ambos permite redundancia y comparación de datos para mayor confiabilidad.</li>
+</p>
+
+<p>microcontrolador (arduino o esp32):
+<li>Recibe las lecturas de ambos sensores.</li>
+<li>Procesa los datos y toma decisiones para activar actuadores (ventiladores y calefactores).</li>
+<li>Gestiona la comunicación Bluetooth con el módulo HC-06.</li>
+<li>Se alimenta mediante una fuente de alimentación estable para asegurar el funcionamiento continuo.</li>
+</p>
+
+<p>actuadores(calefactores y ventiladores):
+    <li> Responden a las órdenes del microcontrolador para regular temperatura y humedad en el ambiente controlado.</li>
+</p>
+
+<p>Comunicación Bluetooth (módulo HC-06):
+    <li> Permite enviar datos (temperatura/humedad) y recibir órdenes desde un dispositivo externo (celular).</li>
+    <li> Conexión simple, de bajo consumo energético y ampliamente soportada en plataformas móviles.</li>
+</p>
+
+<p> Plataforma de control (App Inventor):
+    <li> Permite crear una aplicación móvil personalizada para visualizar datos, recibir alertas y controlar manualmente el sistema.</li>
+    <li> Proporciona una interfaz amigable sin necesidad de programación compleja.</li>
+</p>
+
+
+<h3>¿por qué elegimos este medio de comunicacion y esta aplicacion?</h3>
+<p>medio de comunicacion(HC-06):
+    <li>Bajo costo y fácil implementación: Compatible con Arduino y ESP32 sin necesidad de configuraciones avanzadas.</li>
+    <li>Alcance suficiente: Aproximadamente 10 metros, adecuado para control local.</li>
+    <li>Bajo consumo energético: Ideal para sistemas que podrían funcionar con baterías o fuentes limitadas.</li>
+    <li>Compatibilidad universal: Todos los celulares cuentan con Bluetooth, evitando sistemas adicional.</li>
+</p>
+
+<p>aplicacion(App Inventor):
+    <li>Desarrollo rápido y visual: Permite crear aplicaciones sin experiencia avanzada en programación.</li>
+    <li>Flexibilidad: Fácil de modificar o añadir funciones (por ejemplo, gráficas en tiempo real o alertas).</li>
+    <li>Accesibilidad: Funciona en Android, un sistema operativo muy extendido, asegurando que casi cualquier usuario pueda interactuar con el sistema.</li>
+</p>
+
+        </div>
+    
+
+    
+        
+    </main>
+
+    <footer>
+        <p>© 2025 - Proyecto desarrollado para el área de Automatización</p>
+    </footer>
+</body>
+</html>
